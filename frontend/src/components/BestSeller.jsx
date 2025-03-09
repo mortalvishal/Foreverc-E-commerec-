@@ -1,24 +1,38 @@
-import React, { useContext, useEffect, useState } from 'react'
-import {ShopContext} from '../context/ShopContext'
+import React, { useContext, useEffect, useState } from "react";
+import { ShopContext } from "../context/ShopContext";
+import Title from "./Title";
+import ProductItem from "./ProductItem";
 
 const BestSeller = () => {
+  const { products } = useContext(ShopContext);
 
-    const {products} = useContext(ShopContext);
-    const [bestSeller,setBestSeller] = useState([]);
+  const [bestSeller, setBestSeller] = useState([]);
 
-    useEffect(()=>{
-        const bestProducts = products.filter((item)=>(item.bestSeller))
-        setBestSeller(bestProducts.slice(0,5))
-    },[])
+  useEffect(() => {
+    const bestProduct = products.filter((item) => (item.bestSeller));
+    setBestSeller(bestProduct.slice(0,5));
+  }, []);
 
   return (
-    <div className='my-10'>
-        <div className='text-center text-3xl py-8'>
-        <title text1={'BEST'} text2={'SELLER'} />
-        <p></p>
-        </div>
+    <div className="my-10">
+      <div className="text-center text-3xl py-8">
+        <Title text1={"BEST"} text2={"SELLER"} />
+        <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
+          A bestselling Clothes is one that consistently ranks high on sales
+          charts, capturing a large readership through its compelling narrative,
+          relevant themes, and strong marketing, often becoming a cultural
+          phenomenon with widespread recognition and discussion among readers
+        </p>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 gap-y-6">
+        {
+            bestSeller.map((item,index)=>(
+                <ProductItem key={index} id={item._id} name={item.name} image={item.image} price={item.price} />
+            ))
+        }
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default BestSeller
+export default BestSeller;
