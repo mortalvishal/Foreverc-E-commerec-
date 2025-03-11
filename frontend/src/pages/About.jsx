@@ -10,7 +10,7 @@ const About = () => {
       <Title text1={'ABOUT'} text2={'US'}/>
       </div>
       <div className='my-10 flex flex-col md:flex-row gap-16'>
-        <img className='w-full md:max-w-[450px]' src={assets.about_img} alt=''/>
+        <img className='w-full md:max-w-[450px] border rounded' src={assets.about_img} alt=''/>
         <div className='flex flex-col justify-center gap-6 md:w-2/4 text-gray-600'>
           <p>Forever was born out of a passion for Innovation and a desire to revolutionize the way people shop online. Our journey begin with a simple idea to provide a platform where customers can easily Discover, explore, and purchase a wide range of product from the comfort of their homes. </p>
           <p>Since our Inception ,we've work tirelessly to cure it a diverse selection of high-quality products that cater to every taste and preference. From fashion and beauty to electronics and home essential, we offer an extensive collection source from trusted brands and suppliers.</p>
