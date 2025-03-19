@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { assets } from "../assets/assets";
 import { Link, NavLink } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
@@ -14,12 +15,13 @@ const Navbar = () => {
     setCartItems({})
     
   }
-
+  // this is for the go to admin panel
+  const AdminNavigate = useNavigate();
 
   return (
     <div className="flex items-center justify-between py-5 font-medium">
       <Link to={'/'}><img src={assets.logo} className="w-36" alt="" /></Link> 
-      <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
+      <ul className="hidden items-center sm:flex gap-5 text-sm text-gray-700">
         <NavLink to="/" className="flex flex-col items-center gap-1">
           <p>HOME</p>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
@@ -36,6 +38,7 @@ const Navbar = () => {
           <p>CONTACT</p>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
+        <button onClick={() => window.location.href = "http://localhost:5174/"} className="rounded-md border border-slate-300 px-4 py-2 text-sm text-slate-600 shadow-sm transition-all hover:bg-slate-800 hover:text-white hover:border-slate-800 focus:bg-slate-800 focus:text-white active:bg-slate-800 active:text-white disabled:opacity-50 disabled:pointer-events-none">Admin Panel</button>
       </ul>
       <div className="flex items-center gap-6">
         <img onClick={()=>setShowSearch(true)} src={assets.search_icon} className="w-5 cursor-pointer" alt="" />
