@@ -16,39 +16,39 @@
 
 ## 📂 Folder Structure
 # Install backend dependencies
-cd backend
-npm install
+- cd backend
+- npm install
 
 # Install frontend dependencies
-cd ../frontend
-npm install
+- cd ../frontend
+- npm install
 
 # Install admin panel dependencies
-cd ../admin
-npm install
+- cd ../admin
+- npm install
 
 # For the .env file
-PORT = Your backend port
-MONGODB_URI = Your mongodb URI
-CLOUDINARY_API_KEY = Your cloudinary URI
-CLOUDINARY_SECRET_KEY = Your cloudinary secret key
-CLOUDINARY_NAME = your cloudinary name
-JWT_SECRET = Your JWT secret key
-ADMIN_EMAIL = your admin email
-ADMIN_PASSWORD = admin password
-STRIPE_SECRET_KEY = Your Stripe secret key
-RAZORPAY_KEY_SECRET = Your razorpay secret key
-RAZORPAY_KEY_ID = Your razorpay key id
+- PORT = Your backend port
+- MONGODB_URI = Your MongoDB URI
+- CLOUDINARY_API_KEY = Your Cloudinary URI
+- CLOUDINARY_SECRET_KEY = Your Cloudinary secret key
+- CLOUDINARY_NAME = your Cloudinary name
+- JWT_SECRET = Your JWT secret key
+- ADMIN_EMAIL = your admin email
+- ADMIN_PASSWORD = admin password
+- STRIPE_SECRET_KEY = Your Stripe secret key
+- RAZORPAY_KEY_SECRET = Your Razorpay secret key
+- RAZORPAY_KEY_ID = Your Razorpay key id
 
 # Start backend server
-cd backend
-npm run server
+- cd backend
+- npm run server
 
 # Start frontend
-cd ../frontend
-npm run dev
+- cd ../frontend
+- npm run dev
 
 # Start admin panel
-cd ../admin
-npm run dev
+- cd ../admin
+- npm run dev
 
