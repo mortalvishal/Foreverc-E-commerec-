@@ -1,4 +1,4 @@
-# 🛒 E-Commerce MERN App  
+# 🛒 Forever E-Commerce MERN App  
 
 > A Full-Stack E-Commerce Application built using **MERN Stack** (MongoDB, Express, React, Node.js) with authentication, payment integration, and a fully functional admin panel.
 
